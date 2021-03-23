@@ -74,6 +74,8 @@ var setStateResults = function(state){
   }
 }
 
+
+
 console.log(candidate1.electionResults);
 console.log(candidate2.electionResults);
 candidate1.addTheVotes();
@@ -92,9 +94,19 @@ else {
 }
 console.log("The new President is " + winner + "!!!!!!!!");
 
+var countryTable = document.getElementById("countryResults");
+var row = countryTable.children[0].children[0];
+
+row.children[0].innerText = candidate1.name;
+row.children[1].innerText = candidate1.totalVotes;
+row.children[2].innerText = candidate2.name;
+row.children[3].innerText = candidate2.totalVotes;
+row.children[5].innerText = winner;
+
 
 console.log("Loren's color is: " + candidate1.partyColor);
 console.log("Blanca's color is: " + candidate2.partyColor);
+console.log(candidate2.name);
 
 
     
