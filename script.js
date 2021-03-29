@@ -74,17 +74,30 @@ var setStateResults = function(state){
   }
   
   //populating state result table
-  var stateInfoTable = document.getElementById('stateResults');
+  var stateInfoTable = document.getElementById("stateResults");
   var header = stateInfoTable.children[0].children[0];
   var body = stateInfoTable.children[1];
   var stateName = header.children[0].children[0];
   var abbrev = header.children[0].children[1];
   var candidate1Name = body.children[0].children[0];
-var candidate2Name = body.children[1].children[0];
-var candidate1Results = body.children[0].children[1];
-var candidate2Results = body.children[1].children[1];
-var winnersName = body.children[2].children[1];
+  var candidate2Name = body.children[1].children[0];
+  var candidate1Results = body.children[0].children[1];
+  var candidate2Results = body.children[1].children[1];
+  var winnersName = body.children[2].children[1];
   
+  stateName.innerText = theStates[state].nameFull;
+  abbrev.innerText = "(" +theStates[state].nameAbbrev + ")";
+  candidate1Name.innertext = candidate1.name;
+  candidate2Name.innertext = candidate2.name;
+  candidate1Results.innerText = candidate1.electionResults(state);
+  candidate2Results.innerText = candidate2.electionResults(state);
+  
+  if (theStates[state].winner === null){
+    winnersName.innerText = "DRAW";
+  } 
+  else {
+    winnersName.innerText = theStates[state].winner.name;
+  }
   
 }
 
@@ -120,6 +133,7 @@ row.children[5].innerText = winner;
 
 console.log("Loren's color is: " + candidate1.partyColor);
 console.log("Blanca's color is: " + candidate2.partyColor);
+console.log(candidate1.name);
 console.log(candidate2.name);
 
 
