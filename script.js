@@ -74,8 +74,8 @@ var setStateResults = function(state){
   }
   
   //populating state result table
-  var stateInfoTable = document.getElementById("stateResults");
-  var header = stateInfoTable.children[0].children[0];
+  var stateInfoTable = document.getElementById('stateResults');
+  var header = stateInfoTable.children[0];
   var body = stateInfoTable.children[1];
   var stateName = header.children[0].children[0];
   var abbrev = header.children[0].children[1];
@@ -96,7 +96,7 @@ var setStateResults = function(state){
     winnersName.innerText = "DRAW";
   } 
   else {
-    winnersName.innerText = theStates[state].winner.name;
+    winnersName.innerText = theStates[state].winner;
   }
   
 }
@@ -134,7 +134,7 @@ row.children[5].innerText = winner;
 console.log("Loren's color is: " + candidate1.partyColor);
 console.log("Blanca's color is: " + candidate2.partyColor);
 console.log(candidate1.name);
-console.log(candidate2.name);
+console.log(winner);
 
 
     
