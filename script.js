@@ -87,8 +87,8 @@ var setStateResults = function(state){
   
   stateName.innerText = theStates[state].nameFull;
   abbrev.innerText = "(" +theStates[state].nameAbbrev + ")";
-  candidate1Name.innertext = candidate1.name;
-  candidate2Name.innertext = candidate2.name;
+  candidate1Name.innerText = candidate1.name;
+  candidate2Name.innerText = candidate2.name;
   candidate1Results.innerText = candidate1.electionResults(state);
   candidate2Results.innerText = candidate2.electionResults(state);
   
