@@ -29,8 +29,8 @@ var makeCandidate = function(individual, partyColor)
   
 };
 
-var candidate1 = makeCandidate("Loren Peterson", [245, 141, 136]);
-var candidate2 = makeCandidate("Blanca Ray", [132, 17, 11]);
+var candidate1 = makeCandidate("Loren Peterson", [220, 176, 165]);
+var candidate2 = makeCandidate("Blanca Ray", [208, 190, 112]);
 var winner = "?";
 
 candidate1.electionResults = [5, 1, 7, 2, 33, 6, 4, 2, 1, 14, 8, 3, 1, 11, 11, 0, 5, 3, 3, 3, 7, 4, 8, 9, 3, 7, 2, 2, 4, 2, 8, 3, 15, 15,2, 12, 0, 4, 13, 1, 3, 2, 8, 21, 3, 2, 11, 1, 3, 7, 2];
@@ -70,7 +70,7 @@ var setStateResults = function(state){
   }
   
   else {
-    theStates[state].rgbColor = [11,32,57];
+    theStates[state].rgbColor = [167,206,203];
   }
   
   //populating state result table
@@ -96,7 +96,7 @@ var setStateResults = function(state){
     winnersName.innerText = "DRAW";
   } 
   else {
-    winnersName.innerText = theStates[state].winner;
+    winnersName.innerText = theStates[state].winner.name;
   }
   
 }
@@ -134,7 +134,7 @@ row.children[5].innerText = winner;
 console.log("Loren's color is: " + candidate1.partyColor);
 console.log("Blanca's color is: " + candidate2.partyColor);
 console.log(candidate1.name);
-
+console.log(candidate2.name);
 
 
     
