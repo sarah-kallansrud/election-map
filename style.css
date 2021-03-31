@@ -52,23 +52,22 @@ th, td {
   padding: 8px;
 }
 #stateResults th{
-  background-color: #3b3b3b;
+  background-color: #F2D0E7;
   color: white;
 }
 #countryResults th {
-  background-color: #f16059;
-  color: white;
+  background-color: #ffbb87;
 }
 .name-1 {
-  background-color: rgb(132,17,11);
+  background-color: rgb(220, 176, 165);
   color: white;
 }
 .name-2 {
-  background-color: rgb(245, 141, 136);
+  background-color: rgb(208, 190, 112);
   color: white;
 }
 .winner {
-  background-color: #f16059;
+  background-color: #ffbb87;
   color: white;
 }
 
