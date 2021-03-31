@@ -89,8 +89,8 @@ var setStateResults = function(state){
   abbrev.innerText = "(" +theStates[state].nameAbbrev + ")";
   candidate1Name.innerText = candidate1.name;
   candidate2Name.innerText = candidate2.name;
-  candidate1Results.innerText = candidate1.electionResults(state);
-  candidate2Results.innerText = candidate2.electionResults(state);
+  candidate1Results.innerText = candidate1.electionResults[state];
+  candidate2Results.innerText = candidate2.electionResults[state];
   
   if (theStates[state].winner === null){
     winnersName.innerText = "DRAW";
@@ -134,7 +134,7 @@ row.children[5].innerText = winner;
 console.log("Loren's color is: " + candidate1.partyColor);
 console.log("Blanca's color is: " + candidate2.partyColor);
 console.log(candidate1.name);
-console.log(winner);
+
 
 
     
